@@ -10,11 +10,12 @@
   <body>
     
     <?php
-    $userName = "";
-    if ( isset( $_POST['userName'] ) ){
-      $userName = $_POST['userName'];
+    $s = "";
+    if ( isset( $_POST['s'] ) ){
+      $s = $_POST['s'];
     }
-    echo "<h1>Welcome ".$userName."!</h1>\n";
+    if ($s == "Large");
+    echo "wow"
     ?>
     
   </body>
