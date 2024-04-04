@@ -15,7 +15,7 @@
       $s = $_POST['s'];
     }
     if ($s == "Large");
-    echo "wow"
+    echo "$s"
     ?>
     
   </body>
