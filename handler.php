@@ -16,7 +16,7 @@
     }
     if ($s == "Large");
       echo "$s";
-    if (! $s == "Large");
+    if ($s !== "Large");
       echo "whut duh"
     ?>
     
