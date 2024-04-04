@@ -1,8 +1,7 @@
 cost = 0
-tcost = 0
 rep = 0
 rep1 = 0
-print("Hello! Welcome to Papa's Pizzaria. To start off, would you like a   large or an x-large pizza?") 
+print("Hello! Welcome to Papa's Pizzaria. To start off, would you like a large or an x-large pizza?") 
 
 while rep <1:  
   size = input("Please spell the size correctly ")
@@ -20,24 +19,24 @@ while rep <1:
 while rep1 <1:
   top = input("How many toppings would you like? (0-4) ")
   if top == "0":
-    tcost = 0
+    cost = cost + 0
     rep1 = 1
   elif top == "1":
-    tcost = 1
+    cost = cost + 1
     rep1 = 1
   elif top == "2":
-    tcost = 1.75
+    cost = cost + 1.75
     rep1 = 1
   elif top == "3":
-    tcost = 2.5
+    cost = cost + 2.5
     rep1 = 1
   elif top == "4":
-    tcost = 3.35
+    cost = cost + 3.35
     rep1 = 1
   else:
     print("You have entered an invalid number of toppings")
-    
-cost = cost + tcost
+tax = cost*0.13
 total = cost*1.13
-rounded = round(total, 2)
-print("Your total cost is $", rounded)
+print("Your subtotal is $", round(cost, 2))
+print("Your total tax will be $", round(tax, 2))
+print("Your total cost is $", round(total, 2))
