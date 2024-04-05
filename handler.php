@@ -29,7 +29,7 @@
       $cost = 10;
       echo "$cost";
     }
-    if ($s !== "Large" or $s !== "large" or $s !== "L" or $s !== "l" or $s !== "XLarge" or $s !== "xlarge" or $s !== "XL" or $s !== "XLarge" or $s !== "XLarge") {
+    elseif ($s !== "Large" or $s !== "large" or $s !== "L" or $s !== "l" or $s !== "XLarge" or $s !== "xlarge" or $s !== "XL" or $s !== "XLarge" or $s !== "XLarge") {
       echo "Error! Perhaps you mistyped the size?";
     }
 
@@ -51,9 +51,9 @@
 
     $tax = $cost*0.13;
     $total = $cost+$tax;
-    echo "Your subtotal is $cost \n";
-    echo "Your tax is $tax \n";
-    echo "You total is $total \n";
+    echo "Your subtotal is $$cost \n";
+    echo "Your tax is $$tax \n";
+    echo "You total is $$total \n";
     ?>
     
   </body>
