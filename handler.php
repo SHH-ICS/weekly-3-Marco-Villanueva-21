@@ -21,18 +21,15 @@
     }
 
     $cost = 0;
-    echo "$t";
-    if ($s == "Large" or $s == "L") {
+    
+    if ($s == "large" || $s == "l") {
       $cost = 6;
-      echo "$cost";
-    }
-    if ($s =="XLarge" or $s == "XL") {
+    } elseif ($s == "xlarge" || $s == "xl") {
       $cost = 10;
-      echo "$cost";
-    }
-    elseif ($s != "Large" or $s != "L" or $s != "XLarge" or $s != "XL") {
+    } else {
       echo "Error! Perhaps you mistyped the size?";
     }
+
 
     if ($t == 0) {
       $cost = $cost + 0;
