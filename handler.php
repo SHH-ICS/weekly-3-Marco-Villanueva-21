@@ -14,10 +14,10 @@
     if ( isset( $_POST['s'] ) ){
       $s = $_POST['s'];
     }
-    // if ($s == "Large");
-    //   echo "$s";
-    // if ($s !== "Large");
-    //   echo "whut duh";
+    if ($s == "Large");
+      echo "$s";
+    if ($s !== "Large");
+      echo "whut duh";
     ?>
     
   </body>
