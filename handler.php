@@ -18,14 +18,36 @@
     $cost = 0;
     if ($s == "Large") {
       $cost = 6;
+      echo "$cost";
     }
     if ($s =="XLarge") {
       $cost = 10;
+      echo "$cost";
     }
-    if ($s !== "Large") {
-      echo "whut duh";
+    if ($s !== "Large" or $s !== "XLarge") {
+      echo "Error!";
     }
-    echo "$cost"
+
+    if ($t == 1) {
+      $cost = $cost + 1;
+    }
+    if ($t == 2) {
+      $cost = $cost + 1.75;
+    }
+    if ($t == 3) {
+      $cost = $cost + 2.5;
+    }
+    if ($t == 4) {
+      $cost = $cost + 3.35;
+    }       
+    else {
+      echo "Toppings error!";
+    }
+    $tax = $cost*0.13;
+    $total = $cost+$tax;
+    echo "Your subtotal is $cost";
+    echo "Your tax is $tax";
+    echo "You total is $total";
     ?>
     
   </body>
