@@ -21,18 +21,21 @@
     }
 
     $cost = 0;
-    if ($s == "Large") {
+    if ($s == "Large" or $s == "large" or $s == "L" or $s == "l") {
       $cost = 6;
       echo "$cost";
     }
-    if ($s =="XLarge") {
+    if ($s =="XLarge" or $s == "xlarge" or $s == "XL" or $s == "XLarge" or $s == "XLarge") {
       $cost = 10;
       echo "$cost";
     }
-    if ($s !== "Large" or $s !== "XLarge") {
-      echo "Error!";
+    if ($s !== "Large" or $s !== "large" or $s !== "L" or $s !== "l" or $s !== "XLarge" or $s !== "xlarge" or $s !== "XL" or $s !== "XLarge" or $s !== "XLarge") {
+      echo "Error! Perhaps you mistyped the size?";
     }
 
+    if ($t == 0) {
+      $cost = $cost + 1;
+    }
     if ($t == 1) {
       $cost = $cost + 1;
     }
@@ -44,15 +47,13 @@
     }
     if ($t == 4) {
       $cost = $cost + 3.35;
-    }       
-    else {
-      echo "Toppings error!";
     }
+
     $tax = $cost*0.13;
     $total = $cost+$tax;
-    echo "Your subtotal is $cost";
-    echo "Your tax is $tax";
-    echo "You total is $total";
+    echo "Your subtotal is $cost \n";
+    echo "Your tax is $tax \n";
+    echo "You total is $total \n";
     ?>
     
   </body>
