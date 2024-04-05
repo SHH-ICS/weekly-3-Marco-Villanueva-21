@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <title>Toppings</title>
+    <title>Order</title>
   </head>
   <body>
     
@@ -13,6 +13,11 @@
     $s = "";
     if ( isset( $_POST['s'] ) ){
       $s = $_POST['s'];
+    }
+
+    $t = "";
+    if (isset($_POST['t'])) {
+      $t = $_POST['t'];
     }
 
     $cost = 0;
