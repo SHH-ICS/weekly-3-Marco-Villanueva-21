@@ -12,7 +12,7 @@
     <?php
     $s = "";
     if ( isset( $_POST['s'] ) ){
-      $s = $_POST['s'];
+      $s = strtolower($_POST['s']);
     }
 
     $t = "";
@@ -22,17 +22,17 @@
 
     $cost = 0;
     echo "$t";
-    if ($s == "Large" or $s == "large" or $s == "L" or $s == "l") {
+    if ($s == "Large" or $s == "L") {
       $cost = 6;
       echo "$cost";
     }
-    if ($s =="XLarge" or $s == "xlarge" or $s == "XL" or $s == "XLarge" or $s == "XLarge") {
+    if ($s =="XLarge" or $s == "XL") {
       $cost = 10;
       echo "$cost";
     }
-    // elseif ($s != "Large" or $s != "large" or $s != "L" or $s != "l" or $s != "XLarge" or $s != "xlarge" or $s != "XL" or $s != "XLarge" or $s != "XLarge") {
-    //   echo "Error! Perhaps you mistyped the size?";
-    // }
+    elseif ($s != "Large" or $s != "L" or $s != "XLarge" or $s != "XL") {
+      echo "Error! Perhaps you mistyped the size?";
+    }
 
     if ($t == 0) {
       $cost = $cost + 0;
