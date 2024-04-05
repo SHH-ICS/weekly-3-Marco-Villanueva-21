@@ -14,10 +14,18 @@
     if ( isset( $_POST['s'] ) ){
       $s = $_POST['s'];
     }
-    if ($s == "Large");
-      echo "$s";
-    if ($s !== "Large");
+
+    $cost = 0;
+    if ($s == "Large") {
+      $cost = 6;
+    }
+    if ($s =="XLarge") {
+      $cost = 10;
+    }
+    if ($s !== "Large") {
       echo "whut duh";
+    }
+    echo "$cost"
     ?>
     
   </body>
