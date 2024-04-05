@@ -29,7 +29,7 @@
       $cost = 10;
       echo "$cost";
     }
-    elseif ($s !== "Large" or $s !== "large" or $s !== "L" or $s !== "l" or $s !== "XLarge" or $s !== "xlarge" or $s !== "XL" or $s !== "XLarge" or $s !== "XLarge") {
+    elseif ($s != "Large" or $s != "large" or $s != "L" or $s != "l" or $s != "XLarge" or $s != "xlarge" or $s != "XL" or $s != "XLarge" or $s != "XLarge") {
       echo "Error! Perhaps you mistyped the size?";
     }
 
