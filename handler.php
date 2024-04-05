@@ -21,6 +21,7 @@
     }
 
     $cost = 0;
+    echo "$t";
     if ($s == "Large" or $s == "large" or $s == "L" or $s == "l") {
       $cost = 6;
       echo "$cost";
