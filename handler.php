@@ -10,6 +10,9 @@
   <body>
     
     <?php
+    
+    $cost = 0;
+    
     $s = "";
     if ( isset( $_POST['s'] ) ){
       $s = strtolower($_POST['s']);
@@ -19,18 +22,7 @@
     if (isset($_POST['t'])) {
       $t = $_POST['t'];
     }
-
-    $cost = 0;
     
-    if ($s == "large" || $s == "l") {
-      $cost = 6;
-    } elseif ($s == "xlarge" || $s == "xl") {
-      $cost = 10;
-    } else {
-      echo "Error! Perhaps you mistyped the size?";
-    }
-
-
     if ($t == 0) {
       $cost = $cost + 0;
     }
@@ -46,6 +38,18 @@
     if ($t == 4) {
       $cost = $cost + 3.35;
     }
+
+    
+    if ($s == "large" || $s == "l") {
+      $cost = 6;
+    } elseif ($s == "xlarge" || $s == "xl") {
+      $cost = 10;
+    } else {
+      echo "Error! Perhaps you mistyped the size?";
+    }
+
+
+
 
     $tax = $cost*0.13;
     $total = $cost+$tax;
