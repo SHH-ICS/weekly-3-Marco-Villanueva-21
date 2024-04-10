@@ -50,9 +50,9 @@
 
     $tax = $cost*0.13;
     $total = $cost+$tax;
-    echo "Your subtotal is $$cost \n\n";
-    echo "Your tax is $$tax \n\n";
-    echo "You total is $$total \n\n";
+    echo "Your subtotal is $cost \n\n";
+    echo "Your tax is $tax \n\n";
+    echo "You total is $total \n\n";
     ?>
     
   </body>
