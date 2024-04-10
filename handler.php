@@ -41,9 +41,9 @@
 
     
     if ($s == "large" || $s == "l") {
-      $cost = 6;
+      $cost += 6;
     } elseif ($s == "xlarge" || $s == "xl") {
-      $cost = 10;
+      $cost += 10;
     } else {
       echo "Error! Perhaps you mistyped the size? \n";
     }
