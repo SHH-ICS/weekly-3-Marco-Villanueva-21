@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>Order</title>
   </head>
@@ -51,7 +51,7 @@
     $roundcost = number_format($cost, 2);
     $tax = number_format($cost*0.13, 2);
     $total = number_format($cost+$tax, 2);
-    
+
     echo "Your subtotal is $cost \n\n";
     echo "Your tax is $tax \n\n";
     echo "You total is $total \n\n";
