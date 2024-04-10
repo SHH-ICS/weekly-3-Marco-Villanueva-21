@@ -18,24 +18,24 @@
       $s = strtolower($_POST['s']);
     }
 
-    $t = "";
+    $t = 0;
     if (isset($_POST['t'])) {
       $t = $_POST['t'];
     }
 
-    if ($t == "0") {
+    if ($t == 0) {
       $cost = $cost + 0;
     }
-    if ($t == "1") {
+    if ($t == 1) {
       $cost = $cost + 1;
     }
-    if ($t == "2") {
+    if ($t == 2) {
       $cost = $cost + 1.75;
     }
-    if ($t == "3") {
+    if ($t == 3) {
       $cost = $cost + 2.5;
     }
-    if ($t == "4") {
+    if ($t == 4) {
       $cost = $cost + 3.35;
     }
 
@@ -45,11 +45,8 @@
     } elseif ($s == "xlarge" || $s == "xl") {
       $cost = 10;
     } else {
-      echo "Error! Perhaps you mistyped the size?";
+      echo "Error! Perhaps you mistyped the size? \n";
     }
-
-
-
 
     $tax = $cost*0.13;
     $total = $cost+$tax;
