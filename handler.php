@@ -48,8 +48,10 @@
       echo "Error! Perhaps you mistyped the size? \n";
     }
 
-    $tax = $cost*0.13;
-    $total = $cost+$tax;
+    $roundcost = number_format($cost, 2);
+    $tax = number_format($cost*0.13, 2);
+    $total = number_format($cost+$tax, 2);
+    
     echo "Your subtotal is $cost \n\n";
     echo "Your tax is $tax \n\n";
     echo "You total is $total \n\n";
