@@ -11,18 +11,22 @@
     
     <?php
     
+    //initialize cost variable
     $cost = 0;
     
+    //get size input from index
     $s = "";
     if ( isset( $_POST['s'] ) ){
       $s = strtolower($_POST['s']);
     }
-
+    
+    //get toppings input from index
     $t = 0;
     if (isset($_POST['t'])) {
       $t = $_POST['t'];
     }
 
+    //determine the added cost for toppings (only if a valid size was inputted)
     if ($t == 0 && ($s == "large" || $s == "l" || $s == "xlarge" || $s == "xl")) {
       $cost = $cost + 0;
     }
@@ -39,7 +43,7 @@
       $cost = $cost + 3.35;
     }
 
-    
+    //determine the size and add the necessary cost; if invalid, output an error message
     if ($s == "large" || $s == "l") {
       $cost += 6;
     } elseif ($s == "xlarge" || $s == "xl") {
@@ -48,10 +52,12 @@
       echo "Error! Perhaps you mistyped the size? \n";
     }
 
+    //create variables for the rounded subtotal, tax and total
     $roundcost = number_format($cost, 2);
     $tax = number_format($cost*0.13, 2);
     $total = number_format($cost+$tax, 2);
 
+    //echo the subtotal, tax and total if a valid size was input
     if ($s == "large" || $s == "l" || $s == "xlarge" || $s == "xl") {
       echo "Your subtotal is $cost \n\n";
       echo "Your tax is $tax \n\n";
